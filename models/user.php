@@ -19,7 +19,7 @@ class User extends Account implements user_interface
             $this->setName($row['name']);
             $this->setCreatedAt($row['created_at']);
         }
-        return $this->db->fetch_all($result);
+        return $result;
     }
 
     /**

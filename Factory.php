@@ -31,6 +31,8 @@ class Factory
 
 $obj = Factory::build('user');
 $obj->fetch('id', '1');
+var_dump($obj);
+echo '<br/>';
 echo $obj->getId();
 echo '<br/>';
 echo $obj->getName();
