@@ -9,7 +9,7 @@ class User extends Account implements user_interface
     public function fetch($argument, $value)
     {
         $result = $this->db->query("select * from users where $argument = '$value'");
-        if(!$result) {
+        if (!$result) {
             echo "An error occured.\n";
             exit;
         }

@@ -1,6 +1,7 @@
 <?php
 require_once('DBconnection.php');
-require_once ('models/account_abstract.php');
+require_once('models/account_abstract.php');
+
 class Factory
 {
     public static function build($table)
