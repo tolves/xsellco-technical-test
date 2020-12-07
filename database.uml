@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>12bd66bb-3e09-40bf-89e9-77354ac629c0.SCHEMA:xsellco.public</OriginalElement>
+  <nodes>
+    <node x="264.0" y="176.0">12bd66bb-3e09-40bf-89e9-77354ac629c0.TABLE:xsellco.public.users_agent</node>
+    <node x="0.0" y="176.0">12bd66bb-3e09-40bf-89e9-77354ac629c0.TABLE:xsellco.public.users_admin</node>
+    <node x="158.0" y="0.0">12bd66bb-3e09-40bf-89e9-77354ac629c0.TABLE:xsellco.public.users</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="12bd66bb-3e09-40bf-89e9-77354ac629c0.TABLE:xsellco.public.users_admin" target="12bd66bb-3e09-40bf-89e9-77354ac629c0.TABLE:xsellco.public.users">
+      <point x="0.0" y="-74.5" />
+      <point x="122.0" y="151.0" />
+      <point x="205.0" y="151.0" />
+      <point x="-47.0" y="63.0" />
+    </edge>
+    <edge source="12bd66bb-3e09-40bf-89e9-77354ac629c0.TABLE:xsellco.public.users_agent" target="12bd66bb-3e09-40bf-89e9-77354ac629c0.TABLE:xsellco.public.users">
+      <point x="0.0" y="-74.5" />
+      <point x="382.0" y="151.0" />
+      <point x="299.0" y="151.0" />
+      <point x="47.0" y="63.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="250.0" y="162.5" />
+  <SelectedNodes>
+    <node>12bd66bb-3e09-40bf-89e9-77354ac629c0.TABLE:xsellco.public.users_agent</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
