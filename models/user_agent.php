@@ -1,5 +1,4 @@
 <?php
-require_once('account_abstract.php');
 
 class User_agent extends Account implements user_interface
 {
@@ -7,13 +6,14 @@ class User_agent extends Account implements user_interface
     public $has_chat;
     public $has_ticket_access;
     public $created_at;
+
 //    static $belongs_to = array(array('user', 'primary_key' => 'user_id'));
 
 
     public function fetch($argument, $value)
     {
         $result = $this->db->query("select * from users_agent where $argument = '$value'");
-        if(!$result) {
+        if (!$result) {
             echo "An error occured.\n";
             exit;
         }
