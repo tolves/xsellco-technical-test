@@ -21,7 +21,7 @@ class Factory
 
     public static function fetch($table, $argument, $value)
     {
-        $obj = Factory::build($table);
+        $obj = self::build($table);
         $obj->fetch($argument, $value);
         return $obj;
     }
