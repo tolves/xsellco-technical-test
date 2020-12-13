@@ -6,18 +6,13 @@ class Factory
 {
     public static function build($table)
     {
-        switch ($table) {
-            case 'user':
-                $obj = new User();
-                break;
-            case 'user_admin':
-                $obj = new User_admin();
-                break;
-            case 'user_agent':
-                $obj = new User_agent();
-                break;
+        try {
+            $obj = new $table;
+            return $obj;
+        } catch (Throwable $e) {
+            echo "Captured Throwable: " . $e->getMessage() . PHP_EOL;
         }
-        return $obj;
+        return 0;
     }
 
     public static function fetch($table, $argument, $value)
@@ -26,20 +21,12 @@ class Factory
         $obj->fetch($argument, $value);
         return $obj;
     }
-
 }
 
-$obj = Factory::build('user');
-$obj->fetch('id', '1');
-var_dump($obj);
+$obj = Factory::build('users_admin');
 echo '<br/>';
-echo $obj->getId();
-echo '<br/>';
-echo $obj->getName();
-echo '<br/>';
-echo $obj->getEmail();
-echo '<br/>';
-echo $obj->getCreatedAt();
+
+$obj = Factory::fetch('users', "name", "test");
 echo '<br/>';
 $obj = Factory::fetch('user', "name", "test");
 echo '<br/>';
