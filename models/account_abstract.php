@@ -14,8 +14,12 @@ abstract class Account
 
     public function __construct()
     {
-        $DB = DatabaseSingleton::getInstance();
-        $this->db = $DB;
+        try{
+            $DB = DatabaseSingleton::getInstance();
+            $this->db = $DB;
+        }catch (Throwable $e){
+            echo "Captured Throwable: " . $e->getMessage(). PHP_EOL;
+        }
     }
 
     abstract public function intro(): string;
