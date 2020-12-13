@@ -4,10 +4,10 @@ require_once('models/account_abstract.php');
 
 class Factory
 {
-    public static function build($table)
+    public static function build($model)
     {
         try {
-            $obj = new $table;
+            $obj = new $model;
             return $obj;
         } catch (Throwable $e) {
             echo "Captured Throwable: " . $e->getMessage() . PHP_EOL;
@@ -15,9 +15,9 @@ class Factory
         return 0;
     }
 
-    public static function fetch($table, $argument, $value)
+    public static function fetch($model, $argument, $value)
     {
-        $obj = self::build($table);
+        $obj = self::build($model);
         $obj->fetch($argument, $value);
         return $obj;
     }
