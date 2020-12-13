@@ -14,10 +14,6 @@ class DatabaseSingleton
         $this->connection = pg_connect($conn_string);
     }
 
-    private function __clone()
-    {
-    }
-
     public static function getInstance()
     {
         if (null === self::$instance) {
@@ -42,10 +38,5 @@ class DatabaseSingleton
     public function fetch_assoc($result)
     {
         return pg_fetch_assoc($result);
-    }
-
-    public function fetch_result($result)
-    {
-        return pg_fetch_result($result);
     }
 }
