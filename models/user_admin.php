@@ -6,6 +6,7 @@ class User_admin extends Account implements user_interface
     public $is_super_admin;
     public $has_payment_access;
     public $created_at;
+    public $user;
 
 //    static $belongs_to = array(array('user', 'primary_key' => 'user_id'));
 
@@ -23,6 +24,7 @@ class User_admin extends Account implements user_interface
             $this->setHasPaymentAccess($row['has_payment_access']);
             $this->setCreatedAt($row['created_at']);
         }
+        $this->user = Factory::fetch('user', "id", $this->getUserId());
         return $result;
     }
 

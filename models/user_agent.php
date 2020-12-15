@@ -6,7 +6,7 @@ class User_agent extends Account implements user_interface
     public $has_chat;
     public $has_ticket_access;
     public $created_at;
-
+    public $user;
 //    static $belongs_to = array(array('user', 'primary_key' => 'user_id'));
 
 
@@ -24,6 +24,7 @@ class User_agent extends Account implements user_interface
             $this->setHasTicketAccess($row['has_ticket_access']);
             $this->setCreatedAt($row['created_at']);
         }
+        $this->user = Factory::fetch('user', "id", $this->getUserId());
         return $result;
     }
 
