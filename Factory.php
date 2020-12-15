@@ -22,11 +22,14 @@ class Factory
         return $obj;
     }
 }
-
-$obj = Factory::build('users_admin');
+$obj = Factory::fetch('user_admin', "id", "1");
 echo '<br/>';
-
-$obj = Factory::fetch('users', "name", "test");
+var_dump($obj);
+echo '<br/>';
+var_dump($obj->user);
+echo '<br/>';
+echo '<br/>';
+echo '<br/>';
 echo '<br/>';
 $obj = Factory::fetch('user', "name", "test");
 echo '<br/>';
